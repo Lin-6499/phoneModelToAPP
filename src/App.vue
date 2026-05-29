@@ -2,13 +2,22 @@
 import { ref } from 'vue';
 
 import Iphone from './components/iphone.vue';
+import Huadong from "@/components/huadong.vue";
 
 const defaultPreviewUrl = import.meta.env.VITE_UNIAPP_PREVIEW_URL ?? '';
 const previewUrl = ref(defaultPreviewUrl);
+const message = ref(123)
+
+const vHigh = {
+  mounted:(el)=>{
+    el.style.color = 'red'
+  }
+}
 </script>
 
 <template>
   <main class="page-shell">
+<!--    <Huadong/>-->
 <!--    <section class="hero">-->
 <!--      <p class="eyebrow">uniapp preview host</p>-->
 <!--      <h1>把 uniapp 的 H5 预览放进手机模型里</h1>-->
@@ -39,7 +48,7 @@ const previewUrl = ref(defaultPreviewUrl);
         :width="433"
         :height="882"
         mode="auto"
-        :preview-url="'http://localhost:5174/' || undefined"
+        :preview-url="'http://localhost:4001/' || undefined"
       />
     </section>
   </main>
@@ -59,10 +68,12 @@ html, body {
 </style>
 <style scoped>
 
+
+
 .page-shell {
   height: 100vh;
   overflow-y: hidden;
-  padding: clamp(24px, 4vw, 56px);
+  padding: clamp(20px, 2vw, 56px);
   display: grid;
   gap: 24px;
   align-items: start;
