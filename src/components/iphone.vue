@@ -74,7 +74,7 @@ const screen = {
       xmlns="http://www.w3.org/2000/svg"
       :width="props.width"
       :height="props.height"
-      viewBox="`0 0 ${props.width} ${props.height}`"
+      :viewBox="`0 0 ${props.width+30} ${props.height}`"
   >
     <!-- 外壳阴影层，先铺底，制造手机壳厚度感 -->
     <path

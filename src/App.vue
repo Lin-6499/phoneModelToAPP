@@ -2,17 +2,10 @@
 import { ref } from 'vue';
 
 import Iphone from './components/iphone.vue';
-import Huadong from "@/components/huadong.vue";
 
 const defaultPreviewUrl = import.meta.env.VITE_UNIAPP_PREVIEW_URL ?? '';
 const previewUrl = ref(defaultPreviewUrl);
-const message = ref(123)
 
-const vHigh = {
-  mounted:(el)=>{
-    el.style.color = 'red'
-  }
-}
 </script>
 
 <template>
@@ -48,7 +41,7 @@ const vHigh = {
         :width="433"
         :height="882"
         mode="auto"
-        :preview-url="'http://localhost:4001/' || undefined"
+        :preview-url="'http://localhost:4001' || undefined"
       />
     </section>
   </main>
